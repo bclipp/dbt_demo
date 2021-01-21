@@ -5,7 +5,7 @@ with customers as (
         first_name,
         last_name
 
-    from raw.jaffle_shop.customers
+    from DBT_DEMO.DBT_DEMO.RAW_CUSTOMERS
 )
 
-select * from DBT_DEMO.DBT_DEMO.RAW_CUSTOMERS
+select * from customers
