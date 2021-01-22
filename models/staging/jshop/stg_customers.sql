@@ -5,7 +5,7 @@ with customers as (
         first_name,
         last_name
 
-    from DBT_DEMO.DBT_DEMO.RAW_CUSTOMERS
+    from {{ source('jshop','customers') }}
 )
 
 select * from customers

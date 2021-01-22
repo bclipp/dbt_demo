@@ -6,7 +6,7 @@ with orders as (
         order_date,
         status
 
-    from DBT_DEMO.DBT_DEMO.RAW_ORDERS
+    from {{ source('jshop','orders') }}
 )
 
 select * from orders

@@ -1,20 +1,26 @@
 version: 2
 
 models:
-version: 2
-
-models:
 
     - name: stg_customers
+      description: staged data from raw customers table from the  jshop app.
       columns: 
         - name: customer_id
+          description: The Primary Key for customers.
           tests:
             - unique
             - not_null
 
     - name: stg_orders
+      description: staged data from raw oders table from the  jshop app.
       columns: 
+        - name: order_id
+          description: Primary key for orders.
+          tests:
+          - unique
+          - not_null
         - name: status
+          description:  '{{ doc("order_status") }}'
           tests:
             - accepted_values:
                 values:
